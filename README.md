@@ -42,3 +42,27 @@ deactivate
 
 ### Start server
 ```supervisorctl start flask_server```
+
+
+### Requests
+GET
+get users (default sort ID, by ID, by Name) {'status': 'ok', {'result': list]}} {status: fail}
+http://127.0.0.1:5000/get_users
+
+get user (by ID, by Name) {'status': 'ok', {'result': dict]}} {status: fail}
+http://127.0.0.1:5000/get_user?user_id=0
+http://127.0.0.1:5000/get_user?user_name=Andrey
+
+remove user (by ID) {status: ok} {status: fail}
+http://127.0.0.1:5000/remove_user?user_id=0
+
+remove all
+http://127.0.0.1:5000/remove_all_users
+
+POST
+add user {status: ok} {status: fail}
+http://127.0.0.1:5000/add_user
+
+update user {status: ok} {status: fail}
+http://127.0.0.1:5000/update_user
+
